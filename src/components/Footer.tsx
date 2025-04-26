@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
@@ -8,9 +7,13 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <a href="/" className="block mb-4">
-              <span className="text-2xl font-script font-bold text-white">StitchNInk</span>
-            </a>
+            <Link to="/" className="block mb-4">
+              <img 
+                src="/logo.png" 
+                alt="StitchNInk Logo" 
+                className="h-12 w-auto" 
+              />
+            </Link>
             <p className="text-white/80 mb-6">
               Your one-stop destination for premium quality sewing and crafting supplies.
             </p>
