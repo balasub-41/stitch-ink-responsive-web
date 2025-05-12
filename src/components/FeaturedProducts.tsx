@@ -2,23 +2,51 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from 'lucide-react';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 type Product = {
   id: number;
   title: string;
   category: string;
   price: string;
-  imagePlaceholder: string;
+  image: string;
   isNew?: boolean;
   isBestseller?: boolean;
 };
 
 const FeaturedProducts = () => {
   const products: Product[] = [
-    { id: 1, title: "Organic Cotton Fabric", category: "Fabrics", price: "$12.99", imagePlaceholder: "Fabric Roll", isNew: true },
-    { id: 2, title: "Vintage Sewing Kit", category: "Tools", price: "$24.95", imagePlaceholder: "Sewing Kit", isBestseller: true },
-    { id: 3, title: "Summer Dress Pattern", category: "Patterns", price: "$9.99", imagePlaceholder: "Pattern", isNew: true },
-    { id: 4, title: "Embroidery Hoop Set", category: "Accessories", price: "$18.50", imagePlaceholder: "Embroidery Set" },
+    { 
+      id: 1, 
+      title: "Organic Cotton Fabric", 
+      category: "Fabrics", 
+      price: "$12.99", 
+      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80", 
+      isNew: true 
+    },
+    { 
+      id: 2, 
+      title: "Vintage Sewing Kit", 
+      category: "Tools", 
+      price: "$24.95", 
+      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80", 
+      isBestseller: true 
+    },
+    { 
+      id: 3, 
+      title: "Summer Dress Pattern", 
+      category: "Patterns", 
+      price: "$9.99", 
+      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80", 
+      isNew: true 
+    },
+    { 
+      id: 4, 
+      title: "Embroidery Hoop Set", 
+      category: "Accessories", 
+      price: "$18.50", 
+      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+    },
   ];
 
   return (
@@ -41,12 +69,13 @@ const FeaturedProducts = () => {
           {products.map((product) => (
             <div key={product.id} className="group">
               <div className="relative bg-muted rounded-xl overflow-hidden aspect-square">
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center">
-                    <p className="font-script text-xl text-craft-teal">{product.imagePlaceholder}</p>
-                    <p className="text-xs text-muted-foreground">(Product image)</p>
-                  </div>
-                </div>
+                <AspectRatio ratio={1/1}>
+                  <img 
+                    src={product.image} 
+                    alt={product.title} 
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </AspectRatio>
                 
                 {product.isNew && (
                   <span className="absolute top-3 left-3 bg-craft-coral text-white px-2 py-1 rounded-full text-xs font-medium">
@@ -77,22 +106,36 @@ const FeaturedProducts = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-          <div className="bg-gradient-to-r from-craft-teal to-craft-teal/80 rounded-xl p-8 text-white flex flex-col justify-between min-h-[300px]">
-            <div>
+          <div className="bg-gradient-to-r from-craft-teal to-craft-teal/80 rounded-xl p-8 text-white flex flex-col justify-between min-h-[300px] relative overflow-hidden">
+            <div className="absolute inset-0 opacity-20">
+              <img 
+                src="https://images.unsplash.com/photo-1473177104440-ffee2f376098?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                alt="Sewing patterns background" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative z-10">
               <h3 className="font-script text-3xl mb-2">Sewing Patterns</h3>
               <p className="text-white/90 mb-4">Discover our collection of exclusive patterns for your next project.</p>
             </div>
-            <Button className="bg-white text-craft-teal hover:bg-white/90 self-start">
+            <Button className="bg-white text-craft-teal hover:bg-white/90 self-start relative z-10">
               Explore Patterns
             </Button>
           </div>
           
-          <div className="bg-gradient-to-r from-craft-coral to-craft-coral/80 rounded-xl p-8 text-white flex flex-col justify-between min-h-[300px]">
-            <div>
+          <div className="bg-gradient-to-r from-craft-coral to-craft-coral/80 rounded-xl p-8 text-white flex flex-col justify-between min-h-[300px] relative overflow-hidden">
+            <div className="absolute inset-0 opacity-20">
+              <img 
+                src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                alt="Workshops background" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative z-10">
               <h3 className="font-script text-3xl mb-2">Workshops & Classes</h3>
               <p className="text-white/90 mb-4">Learn new techniques with our expert-led workshops.</p>
             </div>
-            <Button className="bg-white text-craft-coral hover:bg-white/90 self-start">
+            <Button className="bg-white text-craft-coral hover:bg-white/90 self-start relative z-10">
               View Schedule
             </Button>
           </div>

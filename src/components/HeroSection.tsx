@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const HeroSection = () => {
   return (
@@ -40,11 +41,14 @@ const HeroSection = () => {
           <div className="aspect-[4/3] md:aspect-square rounded-xl bg-gradient-to-br from-craft-teal/20 to-craft-sage/30 flex items-center justify-center p-4">
             <div className="relative w-full h-full flex items-center justify-center animate-float">
               <div className="absolute w-[90%] h-[90%] bg-white/60 backdrop-blur-sm rounded-xl rotate-3 shadow-xl"></div>
-              <div className="bg-white rounded-xl shadow-lg p-4 w-[85%] h-[85%] -rotate-2 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="font-script text-2xl text-craft-teal">Image Placeholder</p>
-                  <p className="text-sm text-muted-foreground">(Crafting supplies and fabrics)</p>
-                </div>
+              <div className="bg-white rounded-xl shadow-lg p-4 w-[85%] h-[85%] -rotate-2 flex items-center justify-center overflow-hidden">
+                <AspectRatio ratio={4/3} className="w-full h-full">
+                  <img 
+                    src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                    alt="Crafting supplies display" 
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </AspectRatio>
               </div>
             </div>
           </div>
