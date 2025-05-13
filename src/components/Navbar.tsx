@@ -1,8 +1,17 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, Search, ShoppingCart, User, X, Home, Info, Phone, LogIn } from 'lucide-react';
+import { Menu, Search, ShoppingCart, User, X, Home, Info, Phone, LogIn, List, Banner } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,9 +36,52 @@ const Navbar = () => {
           <Link to="/about" className="text-foreground hover:text-craft-teal transition-colors flex items-center gap-2">
             <Info size={16} />About Us
           </Link>
-          <Link to="/services" className="text-foreground hover:text-craft-teal transition-colors flex items-center gap-2">
-            <ShoppingCart size={16} />Services
-          </Link>
+          
+          {/* Services with Submenu */}
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent hover:text-craft-teal p-0 h-auto">
+                  <div className="flex items-center gap-2 text-foreground">
+                    <ShoppingCart size={16} />Services
+                  </div>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[200px] gap-2 p-2">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/services"
+                          className="flex items-center gap-2 w-full select-none space-y-1 rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                        >
+                          <List size={16} />
+                          <div>
+                            <div className="text-sm font-medium">All Services</div>
+                            <p className="text-sm text-muted-foreground">Browse all our services</p>
+                          </div>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/services/banners"
+                          className="flex items-center gap-2 w-full select-none space-y-1 rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                        >
+                          <Banner size={16} />
+                          <div>
+                            <div className="text-sm font-medium">Banners</div>
+                            <p className="text-sm text-muted-foreground">Custom vinyl banners</p>
+                          </div>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+          
           <Link to="/contact" className="text-foreground hover:text-craft-teal transition-colors flex items-center gap-2">
             <Phone size={16} />Contact
           </Link>
@@ -74,9 +126,19 @@ const Navbar = () => {
             <Link to="/about" className="text-foreground hover:text-craft-teal transition-colors py-2 border-b border-gray-100 flex items-center gap-2">
               <Info size={16} />About Us
             </Link>
-            <Link to="/services" className="text-foreground hover:text-craft-teal transition-colors py-2 border-b border-gray-100 flex items-center gap-2">
-              <ShoppingCart size={16} />Services
-            </Link>
+            <div className="py-2 border-b border-gray-100">
+              <div className="flex items-center gap-2 mb-2">
+                <ShoppingCart size={16} />Services
+              </div>
+              <div className="pl-8 flex flex-col space-y-2 mt-2">
+                <Link to="/services" className="text-foreground hover:text-craft-teal transition-colors flex items-center gap-2">
+                  <List size={16} />All Services
+                </Link>
+                <Link to="/services/banners" className="text-foreground hover:text-craft-teal transition-colors flex items-center gap-2">
+                  <Banner size={16} />Banners
+                </Link>
+              </div>
+            </div>
             <Link to="/contact" className="text-foreground hover:text-craft-teal transition-colors py-2 border-b border-gray-100 flex items-center gap-2">
               <Phone size={16} />Contact
             </Link>
