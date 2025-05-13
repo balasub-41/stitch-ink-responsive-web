@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, Search, ShoppingCart, User, X, Home, Info, Phone, LogIn, List } from 'lucide-react';
+import { Menu, Home, Info, Phone, LogIn, List, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {
   NavigationMenu,
@@ -43,7 +43,7 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent hover:bg-transparent hover:text-craft-teal p-0 h-auto">
                   <div className="flex items-center gap-2 text-foreground">
-                    <ShoppingCart size={16} />Services
+                    <List size={16} />Services
                   </div>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -90,22 +90,6 @@ const Navbar = () => {
           </Link>
         </div>
         
-        {/* Desktop Icons */}
-        <div className="hidden md:flex items-center space-x-4">
-          <button aria-label="Search" className="p-2 text-foreground hover:text-craft-teal transition-colors">
-            <Search size={20} />
-          </button>
-          <button aria-label="Account" className="p-2 text-foreground hover:text-craft-teal transition-colors">
-            <User size={20} />
-          </button>
-          <button aria-label="Cart" className="p-2 text-foreground hover:text-craft-teal transition-colors relative">
-            <ShoppingCart size={20} />
-            <span className="absolute -top-1 -right-1 bg-craft-coral text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-              2
-            </span>
-          </button>
-        </div>
-        
         {/* Mobile Menu Button */}
         <button 
           className="md:hidden p-2 text-foreground" 
@@ -128,7 +112,7 @@ const Navbar = () => {
             </Link>
             <div className="py-2 border-b border-gray-100">
               <div className="flex items-center gap-2 mb-2">
-                <ShoppingCart size={16} />Services
+                <List size={16} />Services
               </div>
               <div className="pl-8 flex flex-col space-y-2 mt-2">
                 <Link to="/services" className="text-foreground hover:text-craft-teal transition-colors flex items-center gap-2">

@@ -68,22 +68,25 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-white/80">123 Craft Street, Sewing City, SC 12345</span>
+                <span className="text-white/80">
+                  Stitch N Ink<br />
+                  763 Mabury Road #10<br />
+                  San Jose, CA 95133
+                </span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 flex-shrink-0" />
-                <span className="text-white/80">(123) 456-7890</span>
+                <span className="text-white/80">Text Us: 408-441-0188<br />Se habla español</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 flex-shrink-0" />
-                <span className="text-white/80">hello@stitchnink.com</span>
+                <span className="text-white/80">orders@stitchnink.com</span>
               </li>
             </ul>
             <div className="mt-6">
               <h5 className="font-medium mb-2">Business Hours:</h5>
-              <p className="text-white/80">Monday-Friday: 9am - 6pm</p>
-              <p className="text-white/80">Saturday: 10am - 4pm</p>
-              <p className="text-white/80">Sunday: Closed</p>
+              <p className="text-white/80">Monday - Friday: 7:00AM - 3:30PM</p>
+              <p className="text-white/80">Closed Weekends and all major holidays.</p>
             </div>
           </div>
         </div>
