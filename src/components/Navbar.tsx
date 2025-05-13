@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, Search, ShoppingCart, User, X, Home, Info, Phone, LogIn, List, Banner } from 'lucide-react';
+import { Menu, Search, ShoppingCart, User, X, Home, Info, Phone, LogIn, List } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {
   NavigationMenu,
@@ -68,7 +68,7 @@ const Navbar = () => {
                           to="/services/banners"
                           className="flex items-center gap-2 w-full select-none space-y-1 rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                         >
-                          <Banner size={16} />
+                          <List size={16} />
                           <div>
                             <div className="text-sm font-medium">Banners</div>
                             <p className="text-sm text-muted-foreground">Custom vinyl banners</p>
@@ -135,7 +135,7 @@ const Navbar = () => {
                   <List size={16} />All Services
                 </Link>
                 <Link to="/services/banners" className="text-foreground hover:text-craft-teal transition-colors flex items-center gap-2">
-                  <Banner size={16} />Banners
+                  <List size={16} />Banners
                 </Link>
               </div>
             </div>
