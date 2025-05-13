@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { YoutubeEmbed } from './YoutubeEmbed';
 
 const HeroSection = () => {
   return (
@@ -14,7 +15,9 @@ const HeroSection = () => {
             <span className="text-foreground">One Stitch at a Time</span>
           </h1>
           <p className="text-muted-foreground text-lg mt-4">
-            Discover premium quality fabrics, patterns, and tools for all your creative sewing and crafting projects.
+            We are full service Production Screen Printing and Embroidery service provider located in San Jose, CA. 
+            Our Goal is to make you look great! With the SNI Team you can expect Exceptional service from start 
+            to finish with every order.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Button className="btn-primary md:text-lg">Shop Collection</Button>
@@ -34,6 +37,11 @@ const HeroSection = () => {
               <span className="font-bold text-foreground">1,000+</span> happy crafters this month
             </p>
           </div>
+          
+          {/* YouTube Video */}
+          <div className="mt-8">
+            <YoutubeEmbed videoId="NM1OyE5hzko" />
+          </div>
         </div>
         
         {/* Right Image */}
@@ -44,8 +52,8 @@ const HeroSection = () => {
               <div className="bg-white rounded-xl shadow-lg p-4 w-[85%] h-[85%] -rotate-2 flex items-center justify-center overflow-hidden">
                 <AspectRatio ratio={4/3} className="w-full h-full">
                   <img 
-                    src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                    alt="Crafting supplies display" 
+                    src="/lovable-uploads/5c325ebe-8b63-4415-80cf-33ae7704e08a.png" 
+                    alt="Person working on screen printing" 
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </AspectRatio>
