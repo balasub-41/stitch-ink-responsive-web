@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from 'lucide-react';
@@ -42,10 +41,10 @@ const FeaturedProducts = () => {
     },
     { 
       id: 4, 
-      title: "Embroidery Hoop Set", 
-      category: "Accessories", 
-      price: "$18.50", 
-      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+      title: "Large Format Printing", 
+      category: "Print Services", 
+      price: "$89.99", 
+      image: "/lovable-uploads/f3faeb1a-8114-4225-8911-d7a2a140f446.png" 
     },
   ];
 
