@@ -18,26 +18,26 @@ const FeaturedProducts = () => {
   const products: Product[] = [
     { 
       id: 1, 
-      title: "Organic Cotton Fabric", 
-      category: "Fabrics", 
-      price: "$12.99", 
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80", 
+      title: "Industrial Embroidery Machines", 
+      category: "Equipment", 
+      price: "$1,299.99", 
+      image: "/lovable-uploads/7bc2c3aa-e1ff-404a-a141-7d299e49b371.png", 
       isNew: true 
     },
     { 
       id: 2, 
-      title: "Vintage Sewing Kit", 
-      category: "Tools", 
+      title: "Green Fabric Layers", 
+      category: "Materials", 
       price: "$24.95", 
-      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80", 
+      image: "/lovable-uploads/fd214831-8199-4c00-98c8-d372abac4f63.png", 
       isBestseller: true 
     },
     { 
       id: 3, 
-      title: "Summer Dress Pattern", 
-      category: "Patterns", 
-      price: "$9.99", 
-      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80", 
+      title: "Custom Vinyl Banners", 
+      category: "Print Services", 
+      price: "$129.99", 
+      image: "/lovable-uploads/a82809b7-21c9-4793-8c45-6be0a7ad9006.png", 
       isNew: true 
     },
     { 
@@ -45,7 +45,7 @@ const FeaturedProducts = () => {
       title: "Embroidery Hoop Set", 
       category: "Accessories", 
       price: "$18.50", 
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
     },
   ];
 
