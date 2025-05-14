@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Facebook, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,31 +10,42 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link to="/" className="block mb-4">
               <img 
-                src="/logo.png" 
+                src="/lovable-uploads/2dd5b5d6-ef46-4f62-acf9-160a6a1977e4.png" 
                 alt="StitchNInk Logo" 
-                className="h-12 w-auto" 
+                className="h-16 w-auto" 
               />
             </Link>
             <p className="text-white/80 mb-6">
               Your one-stop destination for premium quality sewing and crafting supplies.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
+              <a 
+                href="https://www.facebook.com/stitchninkcorp" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors"
+              >
                 <span className="sr-only">Facebook</span>
-                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
-                </svg>
+                <Facebook size={18} />
               </a>
-              <a href="#" className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
+              <a 
+                href="https://www.instagram.com/stitchnink/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors"
+              >
                 <span className="sr-only">Instagram</span>
-                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" />
-                </svg>
+                <Instagram size={18} />
               </a>
-              <a href="#" className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
-                <span className="sr-only">Pinterest</span>
+              <a 
+                href="https://www.yelp.com/biz/stitch-n-ink-san-jose-7" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors"
+              >
+                <span className="sr-only">Yelp</span>
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z" />
+                  <path d="M19.047 17.891l-3.073-1.871c-.8.844-.668 1.143-.431 1.555.356.621 1.099.621 2.376 1.218.359.168 1.524.716 1.561.808.27.7-.41 1.25-1.32 1.25-.154 0-.506-.107-.506-.107-1.635-.44-2.055-.923-2.915-1.333-.576-.273-.964-.435-1.276-.435-.551 0-.835.266-1.029.527-1.015 1.367-2.312.72-2.752.411-.401-.282-.466-.713-.207-.974.929-.933 2.934-1.93 2.259-3.777-.182-.495-.725-.958-1.211-1.11-1.337-.417-2.448.231-2.448.231l-2.732-4.566c-.466-.238-.572-.758-.294-1.151 1.444-2.027 4.214-1.33 4.214-1.33l4.331 1.483c.551-.275 1.086-.581 1.632-.899 1.791-1.045 3.314-2.15 3.873-2.905.34-.46.922-.52 1.357-.11.367.344.523.901.296 1.399l-.022.044c-.275.475-1.584 2.655-4.389 4.789-.5.38-.942.694-1.316.947l.265 4.797c.127.328.009 2.465-1.346 4.184-.26.334-.473.372-.626.372z"/>
                 </svg>
               </a>
             </div>
