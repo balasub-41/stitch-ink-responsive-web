@@ -1,7 +1,19 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, Home, Info, Phone, LogIn, List, X, FileText } from 'lucide-react';
+import { 
+  Home, 
+  Info, 
+  Phone, 
+  LogIn, 
+  List, 
+  X, 
+  FileText,
+  Truck,
+  PanelLeft,
+  Flag,
+  User 
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {
   NavigationMenu,
@@ -34,10 +46,10 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-foreground hover:text-craft-teal transition-colors flex items-center gap-2">
-              <Home size={16} />Home
+              <Home size={18} strokeWidth={1.5} className="text-craft-teal" />Home
             </Link>
             <Link to="/about" className="text-foreground hover:text-craft-teal transition-colors flex items-center gap-2">
-              <Info size={16} />About Us
+              <Info size={18} strokeWidth={1.5} className="text-craft-teal" />About Us
             </Link>
             
             {/* Services with Submenu */}
@@ -46,7 +58,7 @@ const Navbar = () => {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="bg-transparent hover:bg-transparent hover:text-craft-teal p-0 h-auto">
                     <div className="flex items-center gap-2 text-foreground">
-                      <List size={16} />Services
+                      <Truck size={18} strokeWidth={1.5} className="text-craft-teal" />Services
                     </div>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -57,7 +69,7 @@ const Navbar = () => {
                             to="/services"
                             className="flex items-center gap-2 w-full select-none space-y-1 rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                           >
-                            <List size={16} />
+                            <PanelLeft size={16} className="text-craft-teal" />
                             <div>
                               <div className="text-sm font-medium">All Services</div>
                               <p className="text-sm text-muted-foreground">Browse all our services</p>
@@ -71,7 +83,7 @@ const Navbar = () => {
                             to="/services/banners"
                             className="flex items-center gap-2 w-full select-none space-y-1 rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                           >
-                            <List size={16} />
+                            <Flag size={16} className="text-craft-teal" />
                             <div>
                               <div className="text-sm font-medium">Banners</div>
                               <p className="text-sm text-muted-foreground">Custom vinyl banners</p>
@@ -86,10 +98,10 @@ const Navbar = () => {
             </NavigationMenu>
             
             <Link to="/contact" className="text-foreground hover:text-craft-teal transition-colors flex items-center gap-2">
-              <Phone size={16} />Contact
+              <Phone size={18} strokeWidth={1.5} className="text-craft-teal" />Contact
             </Link>
             <Link to="/login" className="text-foreground hover:text-craft-teal transition-colors flex items-center gap-2">
-              <LogIn size={16} />Login
+              <User size={18} strokeWidth={1.5} className="text-craft-teal" />Login
             </Link>
             
             <Button 
@@ -115,7 +127,7 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={24} /> : <List size={24} />}
             </button>
           </div>
         </nav>
@@ -125,29 +137,29 @@ const Navbar = () => {
           <div className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-md z-50 animate-fade-in">
             <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
               <Link to="/" className="text-foreground hover:text-craft-teal transition-colors py-2 border-b border-gray-100 flex items-center gap-2">
-                <Home size={16} />Home
+                <Home size={18} strokeWidth={1.5} className="text-craft-teal" />Home
               </Link>
               <Link to="/about" className="text-foreground hover:text-craft-teal transition-colors py-2 border-b border-gray-100 flex items-center gap-2">
-                <Info size={16} />About Us
+                <Info size={18} strokeWidth={1.5} className="text-craft-teal" />About Us
               </Link>
               <div className="py-2 border-b border-gray-100">
                 <div className="flex items-center gap-2 mb-2">
-                  <List size={16} />Services
+                  <Truck size={18} strokeWidth={1.5} className="text-craft-teal" />Services
                 </div>
                 <div className="pl-8 flex flex-col space-y-2 mt-2">
                   <Link to="/services" className="text-foreground hover:text-craft-teal transition-colors flex items-center gap-2">
-                    <List size={16} />All Services
+                    <PanelLeft size={16} className="text-craft-teal" />All Services
                   </Link>
                   <Link to="/services/banners" className="text-foreground hover:text-craft-teal transition-colors flex items-center gap-2">
-                    <List size={16} />Banners
+                    <Flag size={16} className="text-craft-teal" />Banners
                   </Link>
                 </div>
               </div>
               <Link to="/contact" className="text-foreground hover:text-craft-teal transition-colors py-2 border-b border-gray-100 flex items-center gap-2">
-                <Phone size={16} />Contact
+                <Phone size={18} strokeWidth={1.5} className="text-craft-teal" />Contact
               </Link>
               <Link to="/login" className="text-foreground hover:text-craft-teal transition-colors py-2 border-b border-gray-100 flex items-center gap-2">
-                <LogIn size={16} />Login
+                <User size={18} strokeWidth={1.5} className="text-craft-teal" />Login
               </Link>
             </div>
           </div>
