@@ -3,33 +3,11 @@ import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const BannersService = () => {
-  const features = [
-    "Full-color digital printing for vibrant, eye-catching designs",
-    "Durable, weather-resistant 13 oz. vinyl material",
-    "Available in custom sizes to fit your specific needs",
-    "Reinforced edges with metal grommets for easy installation",
-    "Fast turnaround times to meet your deadlines",
-    "UV-resistant inks for long-lasting outdoor use",
-    "Wind slits available for large outdoor banners",
-    "Competitive pricing with volume discounts"
-  ];
-  
-  const applications = [
-    "Store grand openings and special promotions",
-    "Trade shows and exhibition displays",
-    "Sporting events and tournaments",
-    "School and university events",
-    "Corporate meetings and conferences",
-    "Birthday and graduation celebrations",
-    "Political campaigns",
-    "Construction site signage"
-  ];
-
   const bannerProducts = [
     {
       id: 1,
@@ -85,42 +63,6 @@ const BannersService = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        {/* Hero Section - Updated to match the reference image */}
-        <div className="bg-gradient-to-r from-craft-teal to-blue-600 text-white">
-          <div className="container mx-auto px-4 py-16 md:py-20">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">Custom Vinyl Banners</h1>
-                <p className="text-lg mb-8 text-white/90">
-                  High-quality, attention-grabbing custom banners designed to help your business or event stand out. 
-                  Perfect for promotions, events, storefronts, or any occasion where you need to make a big impression.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Link 
-                    to="/contact"
-                    className="bg-white hover:bg-gray-100 text-craft-teal px-6 py-3 rounded-md font-semibold transition-colors"
-                  >
-                    Request a Quote
-                  </Link>
-                  <Link 
-                    to="/services"
-                    className="bg-transparent hover:bg-white/10 border border-white text-white px-6 py-3 rounded-md font-semibold transition-colors"
-                  >
-                    All Services
-                  </Link>
-                </div>
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-2xl">
-                <img 
-                  src="/lovable-uploads/034584f7-d5f7-485f-818e-d1bcd6404a67.png"
-                  alt="Stack of green custom banners" 
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        
         {/* Banner Products Gallery */}
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-12">
@@ -149,55 +91,6 @@ const BannersService = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-        
-        {/* Content Sections */}
-        <div className="bg-gray-50 py-16">
-          <div className="container mx-auto px-4">
-            {/* Features Section */}
-            <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
-              <div>
-                <h2 className="text-3xl font-bold mb-6 text-craft-teal">Banner Features</h2>
-                <ul className="space-y-3">
-                  {features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="text-craft-teal mt-1 shrink-0" size={20} />
-                      <span className="text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-md">
-                <img 
-                  src="/lovable-uploads/f3faeb1a-8114-4225-8911-d7a2a140f446.png"
-                  alt="Banner Features" 
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-            
-            {/* Applications Section */}
-            <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
-              <div className="order-2 md:order-1 rounded-lg overflow-hidden shadow-md">
-                <img 
-                  src="/lovable-uploads/fd214831-8199-4c00-98c8-d372abac4f63.png"
-                  alt="Banner Applications" 
-                  className="w-full h-auto"
-                />
-              </div>
-              <div className="order-1 md:order-2">
-                <h2 className="text-3xl font-bold mb-6 text-craft-teal">Perfect For</h2>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
-                  {applications.map((application, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="text-craft-teal mt-1 shrink-0" size={20} />
-                      <span className="text-muted-foreground">{application}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
           
