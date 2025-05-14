@@ -85,9 +85,9 @@ const BannersService = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-craft-teal to-blue-600 text-white py-16">
-          <div className="container mx-auto px-4">
+        {/* Hero Section - Updated to match the reference image */}
+        <div className="bg-gradient-to-r from-craft-teal to-blue-600 text-white">
+          <div className="container mx-auto px-4 py-16 md:py-20">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">Custom Vinyl Banners</h1>
@@ -112,8 +112,8 @@ const BannersService = () => {
               </div>
               <div className="rounded-lg overflow-hidden shadow-2xl">
                 <img 
-                  src="/lovable-uploads/fd214831-8199-4c00-98c8-d372abac4f63.png"
-                  alt="Custom Vinyl Banner" 
+                  src="/lovable-uploads/034584f7-d5f7-485f-818e-d1bcd6404a67.png"
+                  alt="Stack of green custom banners" 
                   className="w-full h-auto"
                 />
               </div>
